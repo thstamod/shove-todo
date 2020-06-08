@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #232020;
+  color: #fff;
+}
+
+// LAYOUT
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+// INPUT STYLE
+
+.addTodoComponent {
+  display: flex;
+  input {
+    margin: 15px 15px 15px 0;
+    padding: 10px 10px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #bbb;
+    border-radius: 20px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -ms-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+  }
+
+  input:focus {
+    border-color: cornflowerblue;
+  }
+  input[type="text"] {
+    width: 350px;
+  }
+  input[type="number"] {
+    width: 100px;
+  }
+
+  .error-list {
+    color: #e45b5b;
+    list-style-type: none;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    font-size: 12px;
+  }
+}
+
+//BUTTONS
+.button {
+  height: 40px;
+  margin-top: 15px;
+  color: #fff;
+  /* align-self: center; */
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  padding: 6px 42px;
+  font-size: 18px;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+}
+
+.button-green {
+  background-color: #748e54;
+}
+.button-blue {
+  background-color: #345feb;
+}
+.button-yellow {
+  background-color: #9c914f;
+}
+
+//TODOLISTS
+.todoListComponent {
+  .todoLists {
+    list-style-type: none;
+    .todoLists-title {
+      font-size: 25px;
+    }
+    li {
+      margin: 10px 0;
+    }
+  }
+  .button {
+    height: 30px;
+    padding: 6px 30px;
+    font-size: 13px;
+    margin-top: 0;
+    margin-left: 5px;
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
+.progressBarComponent {
+  margin: 30px 0;
+  .progressBar {
+    display: flex;
+    .complication {
+      height: 30px;
+      display: inline-block;
+    }
+    .notStarted {
+      background-color: #d6c2b7;
+    }
+    .paused {
+      background-color: #9c914f;
+    }
+    .running {
+      background-color: #748e54;
+    }
+    .overdue {
+      background-color: #553739;
+    }
+    .completed {
+      background-color: #345feb;
+    }
+  }
+}

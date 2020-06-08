@@ -1,0 +1,27 @@
+<section class="addTodoComponent">
+  <div>
+    <input type="text" v-model="title" />
+    <ul v-if="$validity.errors.title" class="error-list">
+      <li v-for="error in $validity.errors.title">
+        {{ error }}
+      </li>
+    </ul>
+  </div>
+  <div>
+    <input type="number" v-model="duration" />
+    <ul v-if="$validity.errors.duration" class="error-list">
+      <li v-for="error in $validity.errors.duration">
+        {{ error }}
+      </li>
+    </ul>
+  </div>
+
+  <button
+    class="button button-green"
+    type="button"
+    @click="saveTodo"
+    :disabled="!$validity.valid"
+  >
+    save
+  </button>
+</section>

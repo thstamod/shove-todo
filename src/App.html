@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>{{mainTitle}}</h1>
+  <ProgressBar :computedStatus="computedStatus"></ProgressBar>
+  <AddTodo @todoCandidate="todoCandidate"></AddTodo>
+  <TodoList
+    @changeStatus="changeStatus"
+    :completedTodo="completedTodo"
+    :todosList="todosList"
+  ></TodoList>
+</div>

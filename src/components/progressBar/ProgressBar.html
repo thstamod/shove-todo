@@ -1,0 +1,9 @@
+<section class="progressBarComponent">
+  <div v-if="computedStatus.sum" class="progressBar">
+    <div class="complication notStarted" v-bind:style="notStarted"></div>
+    <div class="complication running" v-bind:style="running"></div>
+    <div class="complication paused" v-bind:style="paused"></div>
+    <div class="complication overdue" v-bind:style="overdue"></div>
+    <div class="complication completed" v-bind:style="completed"></div>
+  </div>
+</section>

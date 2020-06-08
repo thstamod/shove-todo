@@ -1,0 +1,42 @@
+<section class="todoListComponent">
+  <div v-if="todosList">
+    <h3>TodoList</h3>
+    <ul class="todoLists">
+      <li v-for="item in todosList" :key="item.id">
+        <span class="todoList-title">{{ item.title }}</span>
+        <button
+          class="button button-green"
+          :disabled="item.start"
+          @click="statusChange(item.id,'start')"
+        >
+          Start
+        </button>
+        <button
+          class="button button-yellow"
+          :disabled="!item.start"
+          @click="statusChange(item.id,'pause')"
+        >
+          Pause
+        </button>
+        <button
+          class="button button-blue"
+          @click="statusChange(item.id,'complete')"
+        >
+          Complete
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div v-if="completedTodo">
+    <h3>Completed</h3>
+    <ul class="todoLists">
+      <li
+        style="text-decoration: line-through"
+        v-for="item in completedTodo"
+        :key="item.id"
+      >
+        <span class="todoList-title">{{ item.title }}</span>
+      </li>
+    </ul>
+  </div>
+</section>

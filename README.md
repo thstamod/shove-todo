@@ -1,5 +1,16 @@
 # shove-todo
 
+## Description
+Todo list written in vue.js and typescript.
+It has 5 states:
+* not started
+* running
+* paused
+* overdue
+* completed
+
+Also it has validation which is written as mixin
+
 ## Project setup
 ```
 npm install
